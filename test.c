@@ -56,3 +56,13 @@ int ispostorder(int a[], int low, int high)
 
   return ret;
 }
+
+/*
+ * 不用加减乘除运算，求两个数之和。
+ * a, b也可以为负数
+ */
+int add_without_arithmetic(int a, int b)
+{
+  char *p = (char *) a; /* char *步长为1，int *步长为4 */
+  return (int) &p[b];   /* p[b] == *(p + b) */
+}
